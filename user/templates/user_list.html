@@ -9,7 +9,7 @@
 	<ul>
 		{% for user in object_list %}
 		<li>ID: {{ user.id }}<br>
-			Username: <strong>{{ user.username }}</strong> <br>
+			Username: <a href="{% url 'edit_user' pk=user.id  %}"><strong>{{ user.username }}</strong></a>  <br>
 			E-mail: {{ user.email }}
 		</li>
 		<br>

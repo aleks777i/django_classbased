@@ -7,8 +7,8 @@ class User(models.Model):
     username = models.CharField(max_length=50)
     email = models.EmailField()
 
-    def get_absolute_url(self):
-        return reverse('user-detail', kwargs={'pk': self.pk})
+    # def get_absolute_url(self):
+    #     return reverse('get_user', kwargs={'pk': self.pk})
 
     def __str__(self):
         return self.username
